@@ -9,7 +9,7 @@ export default function DescriptionTab() {
 
   useEffect(() => {
     if (selectedCourseId) {
-      fetch(`http://192.168.0.7:3000/api/courses/${selectedCourseId}`)
+      fetch(`http://localhost:3000/api/courses/${selectedCourseId}`)
         .then(res => res.json())
         .then(data => setCourse(data))
         .catch(err => console.error('Error fetching course:', err));
